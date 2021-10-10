@@ -15,7 +15,7 @@ class BankUser(User):
         super().__init__(name, pin, password)
         self.balance = 0
         bank_user_database[name] = [pin, password, self.balance]
-    def amt_validation(amt_val):
+    def amt_validation(self, amt_val):
         if type(amt_val) == str or amt_val <= 0:
             print('Only positive numbers can be deposited, withdrawn, transferred, and requested')
             return True
